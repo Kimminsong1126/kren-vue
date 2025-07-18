@@ -1,13 +1,10 @@
 <template>
-  <div class="container">
-    <h2>Todo Home </h2>
-  </div>
+  <div>Home Page</div>
 </template>
 
 <script>
 export default {
-    setup() {
-    }
+
 }
 </script>
 

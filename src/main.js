@@ -7,5 +7,7 @@ import { createApp } from 'vue'
 // import VmodelApp from './test/VmodelApp.vue'
 // createApp(VmodelApp).mount('#app')
 
-import TodoListPage from './todo/TodoListPage.vue'
-createApp(TodoListPage).mount('#app')
+//import TodoListPage from './todo/TodoListPage.vue';
+import App from './App.vue';
+import router from './router';
+createApp(App).use(router).mount('#app')

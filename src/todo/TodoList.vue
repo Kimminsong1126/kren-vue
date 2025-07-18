@@ -7,9 +7,10 @@
                 <input
                     class="form-check-input"
                     type="checkbox"
-                    v-model="data.completed"
+                    :value="data.completed"
+                    @change="toggleChk(idx)"
                 >
-                <label class="form-check-label">
+                <label class="form-check-label" :class="{todo: data.completed}">
                     {{data.subject}}
                 </label>
             </div>
@@ -33,9 +34,12 @@ export default {
         const deleteHandler = (idx) => {
             context.emit('delete-todo', idx);
         }
-
+        const toggleChk = (idx) => {
+            context.emit('toggle-todo', idx);
+        }
         return {
-            deleteHandler
+            deleteHandler,
+            toggleChk
         }
     }
 }
